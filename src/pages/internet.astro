@@ -10,28 +10,27 @@ import DNS from "../assets/DNS.png"
   <h2>Du réseau local au réseau de réseaux </h2>
   <Image src={LAN} alt="LAN" class="imageCentre" />      
   <p>Rapidement après la commercialisation dans les années 1960 des premiers ordinateurs destinés au grand public apparait la possibilité d’interconnecter ceux-ci pour constituer des réseaux informatiques : plusieurs ordinateurs d’un même bâtiment sont par exemple interconnectés à l’aide de fils de cuivre et peuvent échanger des informations numériques.</p>
-  <p>Aujourd’hui, on peut constituer des réseaux avec une multitude de types d’appareils : ordinateurs portables, smartphones, imprimantes connectées etc. en utilisant divers supports physiques : </p>
+  <p>Aujourd’hui, on peut constituer des réseaux avec une multitude de types d’appareils : ordinateurs portables, smartphones, imprimantes connectées etc. en utilisant divers supports physiques : 
   <ul>
       <li>câbles en cuivre</li>
       <li>ondes électromagnétiques (wifi, bluetooth etc.)</li>
       <li>fibre optique</li>
       <li>etc.</li>
-  </ul>
+  </ul></p>
   <Image src={fibreOptique} alt="fibre optique" class="imageCentre" />
-  <p>Lorsque les appareils qui constituent le réseau appartiennent à une même structure, on parle de réseau local (LAN pour Local Area Network). L’interconnexion des différents appareils électroniques à la maison à l’aide d’une box en est un bon exemple : avec ou sans connexion au réseau Internet, les différents appareils <p>domestiques peuvent communiquer entre eux, partager une imprimante, échanger des fichiers audios…</p>
+  <p>Lorsque les appareils qui constituent le réseau appartiennent à une même structure, on parle de réseau local (LAN pour Local Area Network). L’interconnexion des différents appareils électroniques à la maison à l’aide d’une box en est un bon exemple : avec ou sans connexion au réseau Internet, les différents appareils domestiques peuvent communiquer entre eux, partager une imprimante, échanger des fichiers audios…</p>
   <p>Au début des années 1970 se développe l’idée d’interconnecter différents réseaux locaux entre eux (à l’aide des routeurs), par exemple pour relier les ordinateurs de différents laboratoires de recherche aux États-Unis. Aujourd’hui, Internet constitue le plus célèbre des réseaux de réseaux : il interconnecte partout dans le monde des millions de réseaux aussi bien publics que privés.</p>
   <h2>Le protocole TCP/IP </h2>
-  <p>L'envoi de courriers postaux peut se faire grâce d'une part au facteur, qui transporte le message, mais également grâce au système d'adressage : n°, rue, agglomération, code postal etc. qui permet d'orienter le courrier vers la bonne destination.</p>
-  <p>Dans un réseau local ou sur Internet, c'est grâce au protocole TCP/IP que les messages numériques parviennent à bonne destination et sans encombre.</p>
-  <p>Le protocole IP (Internet Protocol) permet d'identifier une machine dans un réseau en lui attribuant une adresse IP. Au sein d'un même réseau, il est donc indispensable que chaque machine ou réseau connecté ait une adresse IP unique.</p>
+  <p>L'envoi de courriers postaux peut se faire grâce d'une part au facteur, qui transporte le message, mais également grâce au système d'adressage : n°, rue, agglomération, code postal etc. qui permet d'orienter le courrier vers la bonne destination. 
+  Dans un réseau local ou sur Internet, c'est grâce au protocole TCP/IP que les messages numériques parviennent à bonne destination et sans encombre.
+  Le protocole IP (Internet Protocol) permet d'identifier une machine dans un réseau en lui attribuant une adresse IP. Au sein d'un même réseau, il est donc indispensable que chaque machine ou réseau connecté ait une adresse IP unique.</p>
   <p>Exemple d'adresse IP (v4) : 192.168.1.1</p>
   <p>Le format actuel des adresses IP utilisées (IP v4) offre 4,3 Milliards d'adresses différentes. Avec l'extension toujours croissante du réseau Internet, cela va devenir prochainement insuffisant, de ce fait les informaticiens préparent d'ores et déjà un nouveau format : ip V6, qui offrira en autre un nombre beaucoup plus élevé d'adresses disponibles.</p>
   <p>Exemple d'adresse IP (v6) : 3002:0bd6:0000:0000:0000:ee00:0033:6778</p>
   <p>Une communication numérique entre deux machines va être découpée en plusieurs segments (ou paquets), chacun contenant l'adresse IP de l'expéditeur et l'adresse IP du destinataire. Le protocole TCP (Transmission Control Protocol) assure la bonne transmission des paquets de données, à l'aide d'un système d'accusé de réception et de contrôle d'éventuelles erreurs de transmission. </p>
   <h2>Clients & Serveurs </h2>
-  <p>Lors de la communication entre deux ou plusieurs machines, on distingue le rôle de client et le rôle de serveur. La machine qualifiée de "client" envoie des requêtes à une machine qualifiée de "serveur". Celle-ci répond au client en renvoyant les données demandées.</p>
-  <p>C'est par exemple ce qui se passe lorsque nous visitons un site internet sur le web : notre navigateur web (exemple : firefox) joue le rôle de client, il demande à la machine qui joue le rôle de serveur et qui héberge le site internet de lui renvoyer les données demandées.</p>
-  <p>Il existe d'autres protocoles de transmission d'informations : dans le protocole peer-to-peer (paire à paire), chaque machine joue à la fois le rôle de serveur et de client : elle peut aussi bien recevoir des données qu'en envoyer sur le réseau. Cela permet d'accélérer les téléchargements : une machine qui vient de télécharger des données peut immédiatement les mettre à disposition d'autres machines tout en continuant à télécharger les données manquantes.</p>
+  <p>Lors de la communication entre deux ou plusieurs machines, on distingue le rôle de client et le rôle de serveur. La machine qualifiée de "client" envoie des requêtes à une machine qualifiée de "serveur". Celle-ci répond au client en renvoyant les données demandées. 
+    C'est par exemple ce qui se passe lorsque nous visitons un site internet sur le web : notre navigateur web (exemple : firefox) joue le rôle de client, il demande à la machine qui joue le rôle de serveur et qui héberge le site internet de lui renvoyer les données demandées.Il existe d'autres protocoles de transmission d'informations : dans le protocole peer-to-peer (paire à paire), chaque machine joue à la fois le rôle de serveur et de client : elle peut aussi bien recevoir des données qu'en envoyer sur le réseau. Cela permet d'accélérer les téléchargements : une machine qui vient de télécharger des données peut immédiatement les mettre à disposition d'autres machines tout en continuant à télécharger les données manquantes.</p>
   <h2>Serveurs DNS </h2>
   <p>Pour communiquer avec une machine du réseau, il suffit de connaître son adresse IP. Ainsi si je souhaite me connecter par exemple au site internet de la SNCF, je dois en théorie connaître et renseigner l'adresse IP du serveur de la SNCF. Néanmoins ce mode opératoire est peu pratique du fait du caractère non explicite des adresses IP.</p>
   <p>C'est ici qu'interviennent les serveurs DNS (Domain Name System) : des sortes de répertoires téléphoniques du web qui associent des adresses IP à des noms de domaines.</p>

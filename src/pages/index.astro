@@ -3,29 +3,33 @@ import { Image } from "astro:assets"
 import ibm from "../assets/IBM-650.jpeg"
 import cookie from "../assets/cookie-the-pom.jpg"
 import BaseLayout from "../layouts/baseLayout.astro"
-const pageTitle = "Index"
+const pageTitle = "Introduction"
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h1>Introduction</h1>
-  <p>Le mot « informatique » est né en 1962 dans la langue française, il vient de la contraction du terme
+  <div class="box">
+    <p>Le mot « informatique » est né en 1962 dans la langue française, il vient de la contraction du terme
       « information » et « automatique ». L’informatique désigne donc l’automatisation du traitement de
       l’information, par l’intermédiaire de machines baptisées ordinateurs.</p>
-      <Image src={ibm} alt="IBM-650" class="imageGauche" />
+      <Image src={ibm} alt="IBM-650" class="image" />
+  </div>
+  <div class="box">
+    <Image src={cookie} alt="cookie" class="image" />
   <p>Les premiers ordinateurs, plutôt baptisés calculateurs sont à l’origine des machines volumineuses destinées à
       effectuer des calculs mathématiques à grande vitesse. Peu de temps après la seconde guerre mondiale, on
       améliore ces calculateurs afin d’en faire des calculateurs programmables, c’est à dire capables d’exécuter une
       grande diversité de programmes, de façon plus générale capables de traiter de l’information.</p>
-  <p>En 1955 l’entreprise IBM commercialise le premier ordinateur produit en masse et destiné au grand public :
+  </div>
+    <p>En 1955 l’entreprise IBM commercialise le premier ordinateur produit en masse et destiné au grand public :
       l’IBM 650. Nous sommes encore bien loin des machines actuelles, mais le développement de l’informatique
       grand public, conjointement aux progrès dans le domaine de la miniaturisation électronique, est lancé.
       Aujourd’hui les ordinateurs sont partout, bien au-delà de l’ordinateur portable ou l’ordinateur fixe de bureau :
-      <Image src={cookie} alt="cookie" class="imageDroite" />
+    </p>
+  
       <ul>
           <li>les smartphones actuels sont par exemple de véritables ordinateurs</li>
           <li>les ordinateurs de bords équipent par exemple les voitures modernes</li>
           <li>etc.</li>
       </ul>
-      </p>
   <p>Initialement cantonnés aux calculs mathématiques, les usages de l’ordinateur n’ont cessé de grandir : imagerie
       numérique (photo & vidéo), communication (via le réseau internet), gestion de l’information (bases de
       données) etc.</p>

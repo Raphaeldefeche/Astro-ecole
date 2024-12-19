@@ -15,50 +15,52 @@ import synthese from "../assets/Schéma de synthèse.jpg"
 ---
 <BaseLayout pageTitle={pageTitle}>
   <h2>Information et codage binaire</h2>
-  <Image src={uniteCentral} alt="unitée centrale" class="imageGauche" />
+  <div class="box">
+    <Image src={uniteCentral} alt="unitée centrale" class="image" />
   <p>Un ordinateur est une machine dite "numérique" : elle ne sait manipuler que des nombres. Bien que, pour l'utilisateur de l'ordinateur, les informations manipulées par un ordinateur semblent être de nature très diverses (images, vidéo, son, texte etc.), elles sont encodées, traitées et stockées sous forme de nombres. Ces nombres sont codés dans le système de numération binaire (deux chiffres sont utilisés : 0 et 1) qui physiquement correspondent à des états électriques ou magnétiques.</p>
-  <p>Le nombre binaire à 8 chiffres suivant 1101 1011 correspond au nombre 219 dans le système de numération décimal. Un nombre binaire à 8 chiffres est appelé octet. Pour quantifier l'information manipulée par l'ordinateur, on utilise l'octet et ses multiples : un kilo octet (noté ko) correspond à un millier d'octets. D'autres préfixes sont couramment utilisés : Méga (M) pour million, Giga (G) milliard, Téra (T) pour millier de milliard...</p> 
+  <p>Le nombre binaire à 8 chiffres suivant 1101 1011 correspond au nombre 219 dans le système de numération décimal. Un nombre binaire à 8 chiffres est appelé octet. Pour quantifier l'information manipulée par l'ordinateur, on utilise l'octet et ses multiples : un kilo octet (noté ko) correspond à un millier d'octets. D'autres préfixes sont couramment utilisés : Méga (M) pour million, Giga (G) milliard, Téra (T) pour millier de milliard...</p></div> 
   <p>L’ordinateur est constitué d’un ensemble de circuits électroniques distincts, échangeant des informations sous forme de signaux électriques, chacun jouant un rôle précis, et abrités par l’unité centrale.</p>
   <h2>Que trouvons nous si nous ouvrons l’unité centrale d’un ordinateur ? </h2>
   <h3>Le microprocesseur</h3>  
   <div class="box">
-    <Image src={microprocesseur} alt="microprocesseur" class="imageDroite" />
     <p>C'est le cœur de l'ordinateur, il réalise les différentes opérations mathématiques et logiques demandées par les programmes qu'exécute l'ordinateur. Il conditionne pour beaucoup la puissance d'un ordinateur. Les microprocesseurs actuels sont souvent capables de traiter 3 Milliards d'opération par seconde (3 GHz), en manipulant des nombres binaires de 64 chiffres (64 bits). Étant donné l'activité intense du microprocesseur, il est muni d'un système de refroidissement (ventilateur) pour éviter la surchauffe. Les principaux fabricants de microprocesseurs pour les ordinateurs grand public sont Intel et AMD.</p>
+    <Image src={microprocesseur} alt="microprocesseur" class="image" />
   </div>
   <h3>La mémoire vive (Ram) </h3>
   <div class="box">
-    <Image src={RAM} alt="RAM" class="imageGauche" />
+    <Image src={RAM} alt="RAM" class="image" />
     <p>C'est la mémoire de travail de l'ordinateur, elle stocke temporairement les informations durant l'exécution d'un programme, et elle est réinitialisée à chaque démarrage de l'ordinateur. Sa capacité détermine pour beaucoup les performances de l'ordinateur, notamment sa capacité à mener de front plusieurs tâches à la fois. 8 Go de mémoire vive constitue aujourd'hui une capacité raisonnable. </p>
   </div>
   <h3>Carte mère</h3> 
   <div class="box">
     <p>Elle accueille et permet l'interconnexion et la communication des précédents éléments entre eux, c'est le chef de gare qui permet d'aiguiller les différentes informations.
     </p> 
-    <Image src={carteMere} alt="carte mere" class="imageDroite" />
+    <Image src={carteMere} alt="carte mere" class="image" />
     <p>Le contrôleur d’entrées/sorties situé sur la carte mère fait le lien avec tous les autres périphériques de l'ordinateur, par exemple pour interconnecter les périphériques d'entrée et sortie comme le clavier, la souris, une imprimante via un port USB etc.</p>
   </div>
   <h3>La mémoire morte (Rom)</h3>
-  <div class="box"><Image src={ROM} alt="ROM" class="imageGauche" />
+  <div class="box">
+    <Image src={ROM} alt="ROM" class="image" />
     <p>De faible capacité, elle n'est pas modifiable, perdure lorsque l'ordinateur et éteint, et contient les informations minimums indispensables au démarrage de l'ordinateur et est située sur la carte mère. Par exemple, lorsque l'ordinateur est mis sous tension, c'est la ROM qui indique où se trouve le premier programme à lancer, généralement un système d'exploitation comme Windows, Linux ou Mac Os.</p>
   </div>
   <h3>Carte graphique </h3>
   <div class="box">
-    <Image src={carteGraphique} alt="carte graphique" class="imageDroite" />
-  <p>Parfois directement intégrée à la carte mère, elle pilote le périphérique d'affichage comme l'écran ou le vidéo-projecteur. Étant donné les prouesses d'affichages des ordinateurs, elle est peu à peu devenue un des circuits les plus élaborés de l'ordinateur, au point d'être équipé d'un microprocesseur dédié, baptisé GPU (Graphic Processing Unit). Elle permet la connexion de l’écran, via le port VGA ou HDMI.</p>
+    <p>Parfois directement intégrée à la carte mère, elle pilote le périphérique d'affichage comme l'écran ou le vidéo-projecteur. Étant donné les prouesses d'affichages des ordinateurs, elle est peu à peu devenue un des circuits les plus élaborés de l'ordinateur, au point d'être équipé d'un microprocesseur dédié, baptisé GPU (Graphic Processing Unit). Elle permet la connexion de l’écran, via le port VGA ou HDMI.</p>
+    <Image src={carteGraphique} alt="carte graphique" class="image" />
   </div>
   <h3>Carte son</h3>
 <div class="box">
-  <Image src={carteSon} alt="carte son" class="imageGauche" />
+  <Image src={carteSon} alt="carte son" class="image" />
   <p>Également parfois directement intégrée à la carte mère, elle traduit les informations binaires en signaux électriques qui alimentent des enceintes ou un haut-parleur. </p>
 </div>
   <h3>Carte réseau </h3>
   <div class="box">
-    <Image src={carteReseau} alt="carte reseau" class="imageDroite" />
-  <p>Elle permet l'interconnexion de l'ordinateur avec d'autres ordinateurs (réseau LAN), ou de se connecter au réseau Internet, via un câble RJ45. </p>
+    <p>Elle permet l'interconnexion de l'ordinateur avec d'autres ordinateurs (réseau LAN), ou de se connecter au réseau Internet, via un câble RJ45. </p>
+    <Image src={carteReseau} alt="carte reseau" class="image" />
   </div>
   
   <h3>Le disque dur et autres lecteurs de stockage</h3>
-  <div class="box"><Image src={disqueDur} alt="disque dur" class="imageGauche" />
+  <div class="box"><Image src={disqueDur} alt="disque dur" class="image" />
     <p>Disque dur et autres lecteurs (DVD, carte SD) sont capables de stocker une grande quantité d'octets, qui perdure après extinction de l'ordinateur. L'ancienne génération de disque dur utilisait le magnétisme pour stocker de manière durable les octets, les disques durs d'aujourd'hui exploitent la technologie SSD (Solid State Drive) qui utilise l'électricité statique. Les disques durs atteignent aujourd'hui la capacité d'un To, la capacité d'un DVD est d'environ 4,7 Go. Dans les anciens disques durs, c'est grâce au magnétisme que l'on peut conserver de l'information numérique lorsque l'ordinateur n'est plus sous tension. </p>
   </div>
   

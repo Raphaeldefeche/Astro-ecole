@@ -1,7 +1,41 @@
 ---
 import BaseLayout from "../layouts/baseLayout.astro"
+import error from "../assets/error404.png"
+import server from "../assets/client-server.png"
+import { Image } from "astro:assets"
 const pageTitle = "web"
 ---
 <BaseLayout pageTitle={pageTitle}>
 
+  <h3>Internet et le web, une confusion courante</h3>
+  <p>Il est courant de confondre Internet et le Web, pourtant il convient de bien distinguer les deux. Comme vu dans le chapitre précédent, Internet est un réseau qui interconnecte les machines, le Web est un des services offerts par ce réseau, tout comme le service de mail (SMTP) ou le service d'échange de fichiers (FTP).
+      Que pouvons-nous faire via le web ? Avec un logiciel navigateur (firefox, opera, safari etc.), explorer une multitude de sites internet qui me proposent de multiples services. Pour passer de l'un à l'autre, j'utilise des liens de navigation (hypertextes). En quelque sorte, l'ensemble des sites internet reliés entre eux par des liens de navigation constituent une gigantesque "toile d'araignée" (c'est la signification du célèbre www : "World Wide Web" littéralement toile d'araignée mondiale).</p>
+  <h3>Un peu d'histoire</h3>
+  <p>Le Web est né en 1991, grâce à Tim Berners-Lee, un scientifique Britannique qui a défini le concept de "page web" et de lien "hypertexte". Il est à l'origine des bases du langage HTML que nous utilisons pour concevoir des pages web, et du protocole HTTP qui permet la communication entre un serveur et un client lors de la visite d'une page.</p>
+  <p>Aujourd'hui, prêt de 1,88 Milliards de sites sont disponibles dans le monde.</p>
+  <h3>Visiter un site internet</h3>
+  <div class="box">
+    <p>Lorsqu'un ordinateur client visite un site web par l'intermédiaire d'un logiciel navigateur, il adresse en fait à une demande (une requête) à serveur qui héberge ce site internet, selon un protocole bien défini : le protocole HTTP (HTTPS dans sa version sécurisée).
+      Le serveur examine alors la requête : si la page web demandée par l'utilisateur existe et qu'elle est publique, le serveur transfert alors au logiciel client les fichiers html, css, javascript ainsi que les différents médias (images, vidéos etc.) constitutifs de la page.
+      Le navigateur web du client se charge ensuite d'exécuter convenablement les fichiers reçus pour obtenir le rendu visuel de la page web.</p>
+      <Image src={error} alt="error4O4" class="image" />
+  </div>
+  <h3>Langage client, langage serveur</h3>
+  <div class="box">
+    <Image src={server} alt="client-server" class="image" />
+  <p>Les langages HTML, CSS sont des langages de programmation clients : ils servent à définir le rendu visuel d'un site internet. Ils sont exécutés directement par la machine cliente, qui a téléchargé les fichiers nécessaires sur le serveur.</p>
+  </div>
+  <p>Les langages serveur eux sont plus nombreux : ils sont utilisés pour écrire les programmes informatiques exécutés par les serveurs, et permettent de créer des sites internet dynamiques. Prenons l'exemple d'un site internet sur lequel il vous est proposé de vous identifier à l'aide d'un identifiant et d'un mot de passe, et grâce auquel vous pouvez ensuite télécharger ou uploader des images pouvant ensuite être partagées à des tiers. Il va de soi que le serveur qui héberge un tel site ne va pas renvoyer les mêmes fichier sources HTML, CSS et Javascript à tous les utilisateurs, mais va devoir générer des pages spécifiques suivant que le client est identifié ou non. C'est là que le serveur fait appel à divers programmes chargés de générer rapidement les fichiers HTML, CSS suivant les besoins de la machine cliente. Ces programmes sont conçus en langages serveurs, les plus connus d'entre eux sont :</p>
+  <ul>
+      <li>PHP</li>
+      <li>Java</li>
+      <li>Python</li>
+      <li>C#</li>
+      <li>...</li>
+  </ul>
+  <p>On dit alors que le site internet est un site dynamique.</p>
+  <h3>Cookies</h3>
+  <p>Lors de votre navigation sur une site internet, il peut être utile de sauvegarder un certain nombre d'informations durant votre visite, par exemple le contenu de votre panier sur un site marchand. Pour stocker temporairement ce type d'information, un site internet peut utiliser un cookie : un fichier peu volumineux qui contient des informations relatives à votre navigation sur le site, et stocké sur l'ordinateur client.</p>
+  <p>Si le cookie n'est pas détruit après votre visite, il sera automatiquement réutilisé lors de votre prochaine visite sur le même site.
+      Les cookies sont indispensables au bon fonctionnement de certains sites web, par exemple ceux où il est nécessaire de s'identifier pour accéder à certaines parties du site.</p>
 </BaseLayout>

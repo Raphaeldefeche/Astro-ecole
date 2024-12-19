@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/baseLayout.astro"
-const pageTitle = "application"
+const pageTitle = "Système d’exploitation & applications"
 import linux from "../assets/linux.jpg"
 import mac from "../assets/MacOs.png"
 import windows from "../assets/Windows10.jpg"
@@ -9,28 +9,35 @@ import { Image } from "astro:assets"
 
 ---
 <BaseLayout pageTitle={pageTitle}>
-
-  <h1>Système d’exploitation & applications</h1> 
-  <p>Les usages que permet un ordinateur sont devenus extrêmement diversifiés à mesure que son utilisation s'est répandue dans nos mode de vie. À l'origine conçu pour exécuter des calculs, un ordinateur permet aujourd'hui une multitude d'activités, comme créer des documents textes (CV, rapports de stage), des tableaux et <p>des listes, stocker et modifier des images, naviguer sur le web, écouter ou créer de la musique etc. </p>
-  Suivant l’usage, il s’agit d’exécuter un programme, logiciel (ou encore application) spécifique parmi ceux présents sur le disque dur de l’ordinateur, par exemple :</p>
+  <p>Les usages que permet un ordinateur sont devenus extrêmement diversifiés à mesure que son utilisation s'est répandue dans nos mode de vie. À l'origine conçu pour exécuter des calculs, un ordinateur permet aujourd'hui une multitude d'activités, comme créer des documents textes (CV, rapports de stage), des tableaux et des listes, stocker et modifier des images, naviguer sur le web, écouter ou créer de la musique etc. </p>
+  <p>Suivant l’usage, il s’agit d’exécuter un programme, logiciel (ou encore application) spécifique parmi ceux présents sur le disque dur de l’ordinateur, par exemple :
   <ul>
       <li>Le programme LibreOffice Writer permet de créer et d’éditer des documents texte</li>
       <li>Photoshop ou Gimp permettent de retoucher des photos</li>
       <li>Firefox ou Google Chrome permettent de naviguer sur le web</li>
       <li>etc.</li>
   </ul>
+  </p>
   <h2>Le système d'exploitation</h2>
-  <Image src={linux} alt="linux" />
-  <Image src={mac} alt="macOs" />
-  <Image src={windows} alt="windows" />
   <p>Chacun des programmes voudra utiliser pour s'exécuter les ressources de l'ordinateur : accès au microprocesseur, gestion de la mémoire etc.</p> 
-  <p>Le système d'exploitation joue parmi les différents programmes un rôle bien spécifique : il est le programme principal exécuté par l'ordinateur, et a pour rôle de permettre aux autres programmes de s'exécuter en accédant aux ressources de l'ordinateur : temps de calcul du microprocesseur, stockage et accès aux informations en mémoire, accès aux périphériques etc. Il permet notamment à l'ordinateur d'être multitâche, c'est à dire d'exécuter plusieurs programmes simultanément. Il permet également la bonne organisation du système de dossier et de fichiers sollicités par les programmes.</p>
-  <p>Les systèmes d'exploitation actuels les plus répandus sont Windows, développé par Microsoft, Mac Os développé par Apple, et Linux, développé librement par une grande communauté d'informaticiens à travers le monde. À la différence de Mac Os et Windows, Linux est un logiciel libre (ou OpenSource) : sa conception est transparente, tout le monde peut y contribuer ! Du fait de sa grande fiabilité, Linux est actuellement le système d'exploitation le plus utilisé dans le monde des serveurs et des super-calculateurs.</p>
-  <p>Au démarrage d'un ordinateur, le processeur commence tout d'abord par lire les informations contenues dans la mémoire ROM, qui contient notamment l'adresse de l'emplacement du système d'exploitation sur le disque dur. Le système d'exploitation peut alors être chargé en mémoire et exécuté par le microprocesseur. Une fois lancé, il nous permet d'accéder aux différents programmes installés sur l'ordinateur, ainsi qu'aux multiples fichiers sur les périphériques de stockage.</p>
+  <div class="box">
+    <Image src={linux} alt="linux" class="image" width="300" />
+    <p>Le système d'exploitation joue parmi les différents programmes un rôle bien spécifique : il est le programme principal exécuté par l'ordinateur, et a pour rôle de permettre aux autres programmes de s'exécuter en accédant aux ressources de l'ordinateur : temps de calcul du microprocesseur, stockage et accès aux informations en mémoire, accès aux périphériques etc. Il permet notamment à l'ordinateur d'être multitâche, c'est à dire d'exécuter plusieurs programmes simultanément. Il permet également la bonne organisation du système de dossier et de fichiers sollicités par les programmes.</p>
+  </div>
+  <div class="box">
+    <p>Les systèmes d'exploitation actuels les plus répandus sont Windows, développé par Microsoft, Mac Os développé par Apple, et Linux, développé librement par une grande communauté d'informaticiens à travers le monde. À la différence de Mac Os et Windows, Linux est un logiciel libre (ou OpenSource) : sa conception est transparente, tout le monde peut y contribuer ! Du fait de sa grande fiabilité, Linux est actuellement le système d'exploitation le plus utilisé dans le monde des serveurs et des super-calculateurs.</p>
+  <Image src={mac} alt="macOs" class="image" />
+  </div>
+  <div class="box">
+    <Image src={windows} alt="windows" class="image" />
+    <p>Au démarrage d'un ordinateur, le processeur commence tout d'abord par lire les informations contenues dans la mémoire ROM, qui contient notamment l'adresse de l'emplacement du système d'exploitation sur le disque dur. Le système d'exploitation peut alors être chargé en mémoire et exécuté par le microprocesseur. Une fois lancé, il nous permet d'accéder aux différents programmes installés sur l'ordinateur, ainsi qu'aux multiples fichiers sur les périphériques de stockage.</p>
+  </div>
   <p>Remarque : les téléphones portables sont devenus de véritables ordinateurs, les deux systèmes d'exploitation principaux utilisés aujourd'hui sont Android (développé par Google) et iOS (développé par Apple).</p>
   <h2>Fichiers & dossiers </h2>
-  <Image src={docx} alt="docX" class="imageDroite" />
+  <div class="box">
+    <Image src={docx} alt="docX" class="image" />
   <p>L'information stockée dans un disque dur est regroupée dans des fichiers. Certains des fichiers contiennent des instructions que l'ordinateur peut exécuter, on parle alors de fichier exécutable, ou plus communément de programme. Les autres fichiers contiennent généralement de l'information qui sera utilisée/modifiée par les programmes. Un programme de traitement d'image comme GIMP par exemple va utiliser et éventuellement modifier l'image codée dans un fichier baptisé par exemple monImage.jpg. Dans cet exemple, on remarquera que le nom du fichier contenant l'image se termine par ".jpg" qu'on appelle suffixe du fichier.</p>
+  </div>
   <p>Étant donné la multitude de fichiers présents sur le disque dur d'un ordinateur, le système d'exploitation organise l'accès à ceux-ci en dossiers. Un dossier est un conteneur de fichiers, et un dossier peut contenir d'autres dossiers. L'imbrication de dossiers créé ce qu'on appelle une arborescence de fichiers. Dans l'illustration suivante (source : ledito.me), le dossier A contient contient le fichier A ainsi que les dossiers B et C. Le dossier B contient à son tour d'autres fichiers et dossiers etc. (image : arborescence_dossiers_fichiers.png). Dans la structure présentée en exemple, le dossier A est appelé "dossier racine".
   </p>
   <p>Dans un système d'exploitation comme Linux ou Windows, l'explorateur de fichiers permet de naviguer dans cette arborescence, pour accéder aux fichiers et programmes souhaités.</p>
