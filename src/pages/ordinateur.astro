@@ -2,7 +2,7 @@
 import Image from "astro/components/Image.astro"
 import BaseLayout from "../layouts/baseLayout.astro"
 const pageTitle = "ordinateur"
-import uniteCentral from "../assets/unitéCentrale.jpeg"
+// import uniteCentral from "../assets/unitéCentrale.jpeg"
 import microprocesseur from "../assets/microprocesseur.jpg"
 import RAM from "../assets/RAM.jpg"
 import carteMere from "../assets/carteMère.jpg"
@@ -16,7 +16,7 @@ import synthese from "../assets/Schéma de synthèse.jpg"
 <BaseLayout pageTitle={pageTitle}>
   <h2>Information et codage binaire</h2>
   <div class="box">
-    <Image src={uniteCentral} alt="unitée centrale" class="image" />
+    <!-- <Image src={uniteCentral} alt="unitée centrale" class="image" /> -->
   <p>Un ordinateur est une machine dite "numérique" : elle ne sait manipuler que des nombres. Bien que, pour l'utilisateur de l'ordinateur, les informations manipulées par un ordinateur semblent être de nature très diverses (images, vidéo, son, texte etc.), elles sont encodées, traitées et stockées sous forme de nombres. Ces nombres sont codés dans le système de numération binaire (deux chiffres sont utilisés : 0 et 1) qui physiquement correspondent à des états électriques ou magnétiques.</p>
   <p>Le nombre binaire à 8 chiffres suivant 1101 1011 correspond au nombre 219 dans le système de numération décimal. Un nombre binaire à 8 chiffres est appelé octet. Pour quantifier l'information manipulée par l'ordinateur, on utilise l'octet et ses multiples : un kilo octet (noté ko) correspond à un millier d'octets. D'autres préfixes sont couramment utilisés : Méga (M) pour million, Giga (G) milliard, Téra (T) pour millier de milliard...</p></div> 
   <p>L’ordinateur est constitué d’un ensemble de circuits électroniques distincts, échangeant des informations sous forme de signaux électriques, chacun jouant un rôle précis, et abrités par l’unité centrale.</p>
